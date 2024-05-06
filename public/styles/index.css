@@ -39,7 +39,7 @@
 }
 
 .main__img {
-  background-image: url("../../src/assets/LagoTiticaca2.jpg");
+  background-image: url("/assets/LagoTiticaca2.jpg");
   /*con el cover hacemos que ocupe todo la caja sin deformarse, es una alternativa a poner 100% 100%*/
   background-size: cover;
   /*con el position center hacemos que cuando la imagen se deforme permanezca centrada*/
