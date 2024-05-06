@@ -1,0 +1,21 @@
+{
+  "context": {
+    "horarios": {
+      "lunes": "",
+      "martes": "",
+      "miercoles": "",
+      "jueves": "",
+      "viernes": "",
+      "sabado": "",
+      "domingo": ""
+    },
+    "opciones_viaje": {
+      "isla1": "Isla del Sol",
+      "isla2": "Isla de la Luna"
+    },
+    "titulo_principal": {
+      "h1": "VIAJA HACIA UN MAR DE PASION",
+      "h2": "ALQUILER DE YATES"
+    }
+  }
+}

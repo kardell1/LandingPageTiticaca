@@ -1,0 +1,37 @@
+---
+import context from "../context.json";
+const islands = context.context.opciones_viaje;
+import islaLuna1 from "../assets/images/Isla_de_la_luna_slider.jpg";
+import islaLuna2 from "../assets/images/Isla_de_la_luna_slider2.jpg";
+import {Slider} from "./Slider.tsx"
+const Images = {
+  image1 : islaLuna1.src,
+  image2 : islaLuna2.src
+}
+
+---
+
+<section class="intro">
+  <div class="intro__wrapper wrapper research">
+    <div class="intro__col">
+         <!-- aca va el slider -->
+         <Slider client:only = 'react' Images = {Images} ruta="moon" />
+    </div>
+    <div class="intro__col">
+      <h2 class="intro__h2">{islands.isla2}</h2>
+      <p class="intro__p">
+        La Isla del Sol, conocida como Inti Punku ("Puerta del Sol" en quechua),
+        fue considerada el centro del universo para los Incas. Su nombre rinde
+        homenaje a Inti, el dios Sol, y su historia está impregnada de
+        misticismo y leyendas. Aquí podrás recorrer las ruinas de antiguos
+        templos y palacios, como el Pilko K'ayma y el Inkalla Wasi, que te
+        remontarán a la época dorada del Imperio Incaico. <br />
+        Rodeada por las majestuosas montañas de la Cordillera de los Andes y bañada
+        por las tranquilas aguas del Lago Titicaca, la Isla del Sol te ofrece un
+        paisaje de ensueño. Podrás disfrutar de caminatas por senderos ancestrales,
+        observar la flora y fauna nativa, y contemplar atardeceres inolvidables que
+        te dejarán sin aliento.
+      </p>
+    </div>
+  </div>
+</section>
