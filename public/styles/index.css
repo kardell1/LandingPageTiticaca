@@ -14,11 +14,11 @@
 
 @font-face {
   font-family: "adams-black";
-  src: url(../../src/assets/fonts/ArchivoBlack-Regular.ttf);
+  src: url(/fonts/ArchivoBlack-Regular.ttf);
 }
 @font-face {
   font-family: "PoetSenOne";
-  src: url(../../src/assets/fonts/PoetsenOne-Regular.ttf);
+  src: url(/fonts/PoetsenOne-Regular.ttf);
 }
 
 /* para que el contenido aparezca de abajo a arriba */
