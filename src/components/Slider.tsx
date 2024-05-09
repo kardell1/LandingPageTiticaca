@@ -9,6 +9,7 @@ type PropsCarrusel = {
 };
 export const Slider = (Images: PropsCarrusel) => {
   const [style, setStyle] = useState("");
+  
   const handleClickLeft = () => {
     setStyle("left");
   };
