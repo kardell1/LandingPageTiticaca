@@ -24,9 +24,59 @@ import { Icon } from "astro-icon/components";
       </div>
       <div class="footer__form">
         <p>
-          Somos un grupo de apasionados lugareños que nos dedicamos a preservar y compartir la belleza natural y cultural de nuestra región.
+          Somos un grupo de apasionados lugareños que nos dedicamos a preservar
+          y compartir la belleza natural y cultural de nuestra región.
         </p>
       </div>
     </div>
   </div>
 </footer>
+
+<style>
+  .footer {
+    color: #fff;
+    background-color: #181818;
+    min-height: 30vh;
+  }
+  .footer__wrapper {
+    /* background-color: blue; */
+    gap: 2rem;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__col {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    flex-basis: 50%;
+  }
+
+  .footer__p {
+    font-size: 1.5em;
+  }
+  .svg {
+    font-size: 2em;
+  }
+  .footer__follow {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    /* background-color: aquamarine; */
+  }
+
+  @media screen and (max-width: 720px) {
+    .footer__wrapper {
+      flex-flow: column;
+    }
+    .footer__p {
+      text-align: center;
+    }
+    .footer__follow {
+      justify-content: center;
+    }
+  }
+</style>

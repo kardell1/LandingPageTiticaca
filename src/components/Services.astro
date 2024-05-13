@@ -2,38 +2,112 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section class="services">
+<section class="services blackBG">
   <div class="wrapper services__wrapper research">
     <div class="">
-      <h5 class="services__h5">Nuestros servicios</h5>
+      <h5 class="Tsize text__center ">Nuestros servicios</h5>
     </div>
     <div class="services__container">
       <div class="services__card">
         <div class="services__icon">
           <Icon name={"boat_icon"} />
         </div>
-        <div><p class="services__p">Viajes <br /> rapidoz</p></div>
+        <div><p class="services__p text__center">Viajes <br /> rapidoz</p></div>
       </div>
       <div class="services__card">
         <div class="services__icon">
           <Icon name={"hotel_icon"} />
         </div>
-        <div><p class="services__p">Hoteles <br> confortables</p></div>
+        <div><p class="services__p text__center">Hoteles <br /> confortables</p></div>
       </div>
       <div class="services__card">
         <div class="services__icon">
           <Icon name={"guide_icon"} />
         </div>
         <div>
-          <p class="services__p">Guias <br /> expertos</p>
+          <p class="services__p text__center">Guias <br /> expertos</p>
         </div>
       </div>
       <div class="services__card">
         <div class="services__icon">
           <Icon name={"food_icon"} />
         </div>
-        <div><p class="services__p">Comida <br> tradicional</p></div>
+        <div><p class="services__p text__center">Comida <br /> tradicional</p></div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* seccion de servicios  */
+  .services {
+    padding: 3rem 0 3rem 0;
+  }
+  .services__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4rem;
+  }
+ 
+
+  .services__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    place-content: center;
+    gap: 1rem;
+  }
+  .services__card {
+    min-height: max-content;
+    width: 70%;
+    border-radius: 10px;
+    border: #dcdbdb solid 0.2px;
+    display: flex;
+    padding: 0.5rem 0 0.5rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 400ms;
+    transition-property: translate box-shadow;
+    transition-timing-function: ease-in;
+  }
+
+  .services__card:hover {
+    translate: 0 -10px;
+    box-shadow: 5px 5px 5px 0px #908f8f;
+  }
+  /*primer valor del box shadow , en el eje x
+  segundo valor es en el eje y 
+  tercer valor la opacidad , o el efecto blur, (difuminacion)
+  cuarto valor  , es una medida de crecimiento o decremiento respecto a la caja original que se le puede asignar
+  y un quinto atributo que es el color de la sombra
+*/
+  .services__p {
+    font-size: 1.3em;
+    font-family: "PoetSenOne";
+  }
+  .services__icon {
+    padding: 1rem;
+    font-size: 3em;
+  }
+  @media screen and (max-width: 720px) {
+    .services__h5 {
+      font-size: 1.5em;
+    }
+    .services__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .services__card {
+      min-width: min-content;
+      padding: 1rem;
+    }
+    .services__wrapper {
+      width: 100%;
+    }
+    .services__icon {
+      font-size: 2em;
+    }
+  }
+
+  /* seccion de descripcion  */
+</style>

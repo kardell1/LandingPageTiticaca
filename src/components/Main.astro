@@ -20,8 +20,7 @@
           <div class="main__tittle__3">U</div>
           <div class="main__tittle__5">N</div>
         </div>
-      </div>
-      <div class="main__tittle">
+
         <div class="main__viaja">
           <div class="main__tittle__1">M</div>
           <div class="main__tittle__3">A</div>
@@ -40,6 +39,7 @@
           <div class="main__tittle__4">N</div>
         </div>
       </div>
+
       <div class="main__Yates">
         <div class="main__viaja">
           <div class="main__tittle__1">A</div>
@@ -66,3 +66,109 @@
     </section>
   </div>
 </main>
+
+<style>
+  .main__img {
+    background-image: url("/images/LagoTiticaca2.jpg");
+    /*con el cover hacemos que ocupe todo la caja sin deformarse, es una alternativa a poner 100% 100%*/
+    background-size: cover;
+    /*con el position center hacemos que cuando la imagen se deforme permanezca centrada*/
+    background-position: center;
+    background-repeat: no-repeat;
+    /*el minimo que ocupara la ventana es 90vh*/
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__tittle {
+    /* background-color: bisque; */
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 3em;
+    font-weight: 500;
+    gap: 0.4em;
+  }
+  .main__tittle__container {
+    color: aliceblue;
+    /* background-color: green; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    letter-spacing: 0.2em;
+    word-spacing: 0.1em;
+  }
+  .main__viaja {
+    /* background-color: aqua; */
+    display: flex;
+  }
+  .main__Yates {
+    display: flex;
+    gap: 0.7em;
+    font-size: 1em;
+  }
+  .main__tittle__1 {
+    /* font-family: "adams-black"; */
+
+    overflow: hidden;
+    animation: letterView;
+    animation-duration: 4s;
+  }
+  .main__tittle__2 {
+    /* font-family: "adams-black"; */
+
+    overflow: hidden;
+    animation: letterView;
+    animation-duration: 2s;
+  }
+  .main__tittle__3 {
+    /* font-family: "adams-black"; */
+
+    overflow: hidden;
+    animation: letterView;
+    animation-duration: 5s;
+  }
+  .main__tittle__4 {
+    /* font-family: "adams-black"; */
+    overflow: hidden;
+    animation: letterView;
+    animation-duration: 6s;
+  }
+  .main__tittle__5 {
+    /* font-family: "adams-black"; */
+    overflow: hidden;
+    animation: letterView;
+    animation-duration: 3s;
+  }
+
+  @keyframes letterView {
+    from {
+      height: 1%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+
+  .main__text {
+    font-size: 1.5em;
+  }
+  @media screen and (max-width: 1000px) {
+    .main__Yates {
+      font-size: 1em;
+    }
+    .main__tittle {
+      font-size: 1.5em;
+    }
+  }
+  @media screen and (max-width: 620px) {
+    .main__tittle {
+      font-size: 2em;
+      align-items: center;
+      flex-flow: column wrap;
+    }
+  }
+  /*su alternativo en rems */
+</style>

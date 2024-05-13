@@ -5,11 +5,17 @@
   font-family: "PoetSenOne";
 }
 /* la etiqueta wrapper es para centrear el contenido */
+/* body{
+  background-color: #f2f4f1;
+} */
+
+
 .wrapper {
   width: 90%;
   max-width: 93.75rem; /*maximo de 1500 pixeles, o su equivalente en rem */
   /* el margin auto lo centrea automaticamente , es como un aligcenter de flex  */
   margin: auto;
+  /* background-color: aqua; */
 }
 
 @font-face {
@@ -18,7 +24,7 @@
 }
 @font-face {
   font-family: "PoetSenOne";
-  src: url(/fonts/PoetsenOne-Regular.ttf);
+  src: url(/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 /* para que el contenido aparezca de abajo a arriba */
@@ -37,207 +43,62 @@
   animation-timeline: view();
   animation-range: entry 20% cover 30%;
 }
-
-.main__img {
-  background-image: url("/images/LagoTiticaca2.jpg");
-  /*con el cover hacemos que ocupe todo la caja sin deformarse, es una alternativa a poner 100% 100%*/
-  background-size: cover;
-  /*con el position center hacemos que cuando la imagen se deforme permanezca centrada*/
-  background-position: center;
-  background-repeat: no-repeat;
-  /*el minimo que ocupara la ventana es 90vh*/
-  min-height: 100vh;
-  display: flex;
-  justify-content: left;
-}
-
-.main__tittle {
-  /* background-color: bisque; */
-  display: flex;
-  flex-flow: row wrap;
-  font-size: 3em;
-  font-weight: 700;
-  gap: 0.4em;
-}
-.main__tittle__container {
-  color: aliceblue;
-  padding-left: 2rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  gap: 0.5rem;
-  letter-spacing: 0.2em;
-  word-spacing: 0.1em;
-}
-.main__viaja {
-  display: flex;
-}
-.main__Yates {
-  display: flex;
-  gap: 0.7em;
-  font-size: 1.5em;
-}
-.main__tittle__1 {
-  font-family: "adams-black";
-
-  overflow: hidden;
-  animation: letterView;
-  animation-duration: 4s;
-}
-.main__tittle__2 {
-  font-family: "adams-black";
-
-  overflow: hidden;
-  animation: letterView;
-  animation-duration: 2s;
-}
-.main__tittle__3 {
-  font-family: "adams-black";
-
-  overflow: hidden;
-  animation: letterView;
-  animation-duration: 5s;
-}
-.main__tittle__4 {
-  font-family: "adams-black";
-  overflow: hidden;
-  animation: letterView;
-  animation-duration: 6s;
-}
-.main__tittle__5 {
-  font-family: "adams-black";
-  overflow: hidden;
-  animation: letterView;
-  animation-duration: 3s;
-}
-
-@keyframes letterView {
+/* para que el contenido aparezca de abajo a arriba */
+@keyframes behindLeftComponent {
   from {
-    height: 1%;
+    opacity: 0;
+    translate: -100px 0;
   }
   to {
-    height: 100%;
+    opacity: 1;
+    translate: 0 0;
   }
 }
-
-.main__text {
-  font-size: 1.5em;
+.researchLeft {
+  animation: behindLeftComponent linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
 }
-
-@media screen and (max-width: 720px) {
-  .main__tittle {
-    font-size: 1.5em;
+@keyframes behindRightComponent {
+  from {
+    opacity: 0;
+    translate: 100px 0;
   }
-  .main__Yates {
-    font-size: 1em;
+  to {
+    opacity: 1;
+    translate: 0 0;
   }
 }
-/*su alternativo en rems */
-
-/* desde aca la seccion de asociados */
-.associate {
-  background-color: #e4e4e7;
-  padding: 3rem 0 3rem 0;
+.researchRight {
+  animation: behindRightComponent linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
 }
-.associate__p {
-  font-size: 2em;
+
+/* css globales  */
+.text__center {
   text-align: center;
 }
-.associate__col {
-  padding: 2rem 0 2rem 0;
-  gap: 3rem;
-  display: flex;
-  justify-content: space-evenly;
-}
-.sponsors {
-  width: 100px;
-  height: 50px;
-  /* background-image: url('/src/assets/isandes-tours-logo.gif'); */
-}
-
-@media screen and (max-width: 720px) {
-  .associate__p {
-    font-size: 1em;
-  }
-}
-
-/* seccion de servicios  */
-.services {
-  padding: 3rem 0 3rem 0;
-}
-.services__wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 4rem;
-}
-.services__h5 {
-  text-align: center;
+/* tamaño de titulos */
+.Tsize {
   font-size: 2em;
   font-weight: 300;
 }
-
-.services__container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
-  place-content: center;
-  gap: 1rem;
-}
-.services__card {
-  min-height: max-content;
-  width: 70%;
-  border-radius: 10px;
-  border: #dcdbdb solid 0.2px;
-  display: flex;
-  padding: 0.5rem 0 0.5rem 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition-duration: 400ms;
-  transition-property: translate box-shadow;
-  transition-timing-function: ease-in;
-}
-
-.services__card:hover {
-  translate: 0 -10px;
-  box-shadow: 5px 5px 5px 0px #908f8f;
-}
-/*primer valor del box shadow , en el eje x
-  segundo valor es en el eje y 
-  tercer valor la opacidad , o el efecto blur, (difuminacion)
-  cuarto valor  , es una medida de crecimiento o decremiento respecto a la caja original que se le puede asignar
-  y un quinto atributo que es el color de la sombra
-*/
-.services__p {
-  text-align: center;
-  font-size: 1.3em;
-  font-family: "PoetSenOne";
-}
-.services__icon {
-  padding: 1rem;
-  font-size: 3em;
-}
 @media screen and (max-width: 720px) {
-  .services__h5 {
-    font-size: 1.5em;
-  }
-  .services__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .services__card {
-    min-width: min-content;
-    padding: 1rem;
-  }
-  .services__wrapper {
-    width: 100%;
-  }
-  .services__icon {
-    font-size: 2em;
+  .Tsize {
+    font-size: 1em;
   }
 }
+/* .Psize {
+  font-size: 2em;
+  font-weight: 300;
+} */
+.blackBG{
+  background-color: #181818;
+  color: #fff;
+}
 
-/* seccion de descripcion  */
-
+/* ---------------------------------------------------------- */
 .intro {
   padding: 2rem 0 2rem 0;
   min-height: 50vh;
@@ -248,7 +109,8 @@
   gap: 1rem;
 }
 .intro__h5 {
-  padding: 2rem 0 2rem 0;
+  /* background-color: aqua; */
+  padding: 3rem 0 3rem 0;
 }
 .intro__p {
   padding: 0 2rem 0 2rem;
@@ -331,86 +193,6 @@
   transform: translateX(0%);
 }
 
-.active{
+.active {
   color: aqua;
-}
-
-
-
-/* seccion de  horarios */
-.schedule {
-  /* overflow: hidden; */
-  color: aliceblue;
-  background-color: #181818;
-  padding: 1rem 0 1rem 0;
-}
-.schedule__container {
-  color: aliceblue;
-  /* background-color: #af2323; */
-  display: flex;
-  flex-flow: wrap;
-  gap: 2rem;
-  justify-content: space-around;
-}
-.schedule__row {
-  /* background-color: blue; */
-  padding: 1rem 0 1rem 0;
-
-  /* background-color: aquamarine; */
-}
-.schedule__h5 {
-  font-size: 1.4em;
-  text-align: center;
-}
-.schedule__col {
-  text-align: center;
-}
-
-/* aca van los datos del footer */
-
-.footer {
-  color: #fff;
-  background-color: #181818;
-  min-height: 30vh;
-}
-.footer__wrapper {
-  /* background-color: blue; */
-  gap: 2rem;
-  padding: 2rem 0 2rem 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer__col {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 1em;
-  flex-basis: 50%;
-}
-
-.footer__p {
-  font-size: 1.5em;
-}
-.svg {
-  font-size: 2em;
-}
-.footer__follow {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 1.5rem;
-  /* background-color: aquamarine; */
-}
-
-@media screen and (max-width: 720px) {
-  .footer__wrapper {
-    flex-flow: column;
-  }
-  .footer__p {
-    text-align: center;
-  }
-  .footer__follow {
-    justify-content: center;
-  }
 }

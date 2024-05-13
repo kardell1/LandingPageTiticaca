@@ -1,0 +1,72 @@
+---
+import islaSol1 from "../assets/images/Isla_del_sol_slider.jpg";
+import { Image } from "astro:assets";
+---
+
+<section class="about">
+  <div class="about__wrapper wrapper">
+    <div class="about__container research">
+      <!-- <Image src={islaSol1} alt="Imagen del lago titicaca" loading="lazy" /> -->
+      <div class="about__col">
+        <div class="about__container__text researchRight text__center">
+          <h2 class="about__h2">Disfruta de la isla del Sol y la Luna</h2>
+          <p class="about__p">Las islas Bolivianas más asombrosas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    /* background-color: green; */
+    padding: 2rem 0 2rem 0;
+  }
+  .about__wrapper {
+    min-height: 80vh;
+    /* background-color: aqua; */
+    display: flex;
+  }
+  .about__col {
+    right: -7rem;
+    height: 100%;
+    position: absolute;
+    width: 30%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+  }
+  .about__container {
+    background-image: url(/images/GEminiFOndo.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 80%;
+    display: flex;
+    /* background-color: blueviolet; */
+  }
+  .about__container__text {
+    padding: 1rem;
+    height: max-content;
+    border-radius: 20px;
+    background-color: rgb(246, 246, 246);
+  }
+
+  .about__h2 {
+    word-spacing: 0.1em;
+  }
+  .about__p {
+    word-spacing: 0.2em;
+
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .about__text {
+      position: relative;
+    }
+    .about__wrapper {
+      flex-flow: column nowrap;
+    }
+  }
+</style>
