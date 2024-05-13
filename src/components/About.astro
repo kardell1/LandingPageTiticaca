@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
     <div class="about__container research">
       <!-- <Image src={islaSol1} alt="Imagen del lago titicaca" loading="lazy" /> -->
       <div class="about__col">
-        <div class="about__container__text researchRight text__center">
+        <div class="about__container__text text__center">
           <h2 class="about__h2">Disfruta de la isla del Sol y la Luna</h2>
           <p class="about__p">Las islas Bolivianas más asombrosas</p>
         </div>
@@ -65,8 +65,16 @@ import { Image } from "astro:assets";
     .about__text {
       position: relative;
     }
-    .about__wrapper {
-      flex-flow: column nowrap;
+    .about__col {
+      position: static;
+      width: 100%;
+      opacity: 0.4;
+    }
+    .about__container {
+      width: 100%;
+    }
+    .about__container__text{
+      border-radius: 0%;
     }
   }
 </style>
