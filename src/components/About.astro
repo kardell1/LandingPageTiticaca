@@ -1,18 +1,19 @@
 ---
-import islaSol1 from "../assets/images/Isla_del_sol_slider.jpg";
-import { Image } from "astro:assets";
+
 ---
 
 <section class="about">
-  <div class="about__wrapper wrapper">
-    <div class="about__container research">
-      <!-- <Image src={islaSol1} alt="Imagen del lago titicaca" loading="lazy" /> -->
-      <div class="about__col">
-        <div class="about__container__text text__center">
-          <h2 class="about__h2">Disfruta de la isla del Sol y la Luna</h2>
-          <p class="about__p">Las islas Bolivianas más asombrosas</p>
-        </div>
-      </div>
+  <div class="about__wrapper wrapper research ">
+    <div class="about__col">
+      <h2 class="about__h2">Disfruta de la isla del Sol y la Luna</h2>
+      <p class="about__p">
+        Estas gemas del altiplano atesoran una rica historia que se remonta a
+        los albores de la civilización incaica, siendo consideradas lugares
+        sagrados y venerados por su profunda conexión con la cosmovisión andina.
+      </p>
+    </div>
+    <div class="about__col">
+      <!-- <Image src={inca} alt={"imagen del inca"} width={500} height={500} /> -->
     </div>
   </div>
 </section>
@@ -23,58 +24,51 @@ import { Image } from "astro:assets";
     padding: 2rem 0 2rem 0;
   }
   .about__wrapper {
-    min-height: 80vh;
-    /* background-color: aqua; */
+    max-width: 70%;
+    min-height: 70vh;
+    color: #fff;
+    background-color: #181818;
     display: flex;
+    flex-flow: row wrap;
   }
   .about__col {
-    right: -7rem;
+    flex-basis: 50%;
+  }
+  .about__col:nth-child(2) {
+    position: relative;
+    /* background-image: url(/images/Inca.jpg); */
+    background-color: blue;
+    /* background-size: cover; */
+
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-position: center; */
+    
+  }
+  .about__h2{
+    font-size: 2.5em;
+  }
+  .about__col:nth-child(2)::before {
+    content: '';
+    width: 100%;
     height: 100%;
     position: absolute;
-    width: 30%;
-    /* background-color: orange; */
-    display: flex;
-    align-items: center;
-  }
-  .about__container {
-    background-image: url(/images/GEminiFOndo.jpeg);
+    top: 0;
+    right: 0;
+    background-image: url(/images/Inca.jpg);
     background-size: cover;
     background-position: center;
-    position: relative;
-    width: 80%;
+    
+    /* background-color: blue; */
+  }
+
+  .about__col:nth-child(1) {
+    gap: 1rem;
+    /* background-color: aquamarine; */
     display: flex;
-    /* background-color: blueviolet; */
-  }
-  .about__container__text {
-    padding: 1rem;
-    height: max-content;
-    border-radius: 20px;
-    background-color: rgb(246, 246, 246);
-  }
-
-  .about__h2 {
-    word-spacing: 0.1em;
-  }
-  .about__p {
-    word-spacing: 0.2em;
-
-    padding: 0.5rem 0 0.5rem 0;
-  }
-
-  @media screen and (max-width: 1000px) {
-    .about__text {
-      position: relative;
-    }
-    .about__col {
-      position: static;
-      width: 100%;
-      opacity: 0.4;
-    }
-    .about__container {
-      width: 100%;
-    }
-    .about__container__text{
-      border-radius: 0%;
-    }
+    justify-content: center;
+    align-items: center;
+    flex-flow: column ;
+    padding:0 1rem 0 1rem ;
   }
 </style>
